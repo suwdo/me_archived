@@ -3,10 +3,27 @@ body {
   margin: 1em auto;
   max-width: 800px;
 }
-h2 {
+#menu {
   font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+h2 {
+  text-decoration: underline;
+}
+h3 {
+  text-transform: uppercase;
 }
 section {
   margin-left: 2em;
 }
 
+p.img-descriptive {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+p.img-descriptive img {
+  display: block;
+  margin-bottom: 0.8rem;
+}
