@@ -2,6 +2,7 @@ body {
   font-family: monospace;
   margin: 1em auto;
   max-width: 800px;
+  padding: 1rem;
 }
 #menu {
   font-size: 1rem;
@@ -18,6 +19,10 @@ section {
   margin-left: 2em;
 }
 
+img {
+  width: 100%;
+}
+
 p.img-descriptive {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -26,4 +31,15 @@ p.img-descriptive {
 p.img-descriptive img {
   display: block;
   margin-bottom: 0.8rem;
+}
+
+.img-full-width {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: auto;
+  max-width: 1000%;
+}
+
+.img-full-width img {
+  width: 100%;
 }
