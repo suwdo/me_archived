@@ -4,7 +4,7 @@ body {
   max-width: 800px;
 }
 h2 {
-  text-decoration: underline;
+  font-size: 1rem;
 }
 section {
   margin-left: 2em;
