@@ -20,7 +20,17 @@ function generatePage(string $header, string $footer, string $contents)
 }
 
 // Generate index page
-file_put_contents('public/index.html', generatePage($header, $footer, ''));
+file_put_contents('docs/index.html', generatePage($header, $footer, ''));
+
+// Generate climbing index pages
+file_put_contents(
+  'docs/climbing.html',
+  generatePage(
+    $header,
+    $footer,
+    $disclaimer . file_get_contents('climbing.html')
+  )
+);
 
 // Generate climbing pages
 $climbingFiles = scandir('climbing/');
@@ -30,7 +40,7 @@ foreach ($climbingFiles as $climbingFile) {
     continue;
   }
   $fileContents = $disclaimer . file_get_contents("climbing/$climbingFile");
-  file_put_contents("public/$climbingFile", generatePage($header, $footer, $fileContents));
+  file_put_contents("docs/$climbingFile", generatePage($header, $footer, $fileContents));
 }
 
 ?>
